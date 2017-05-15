@@ -85,10 +85,9 @@
           );
         }
       });
-      // TODO: 各々の環境に合わせて変更する
+      // TODO:
       const ENDPOINT = "https://2nv8sq81e6.execute-api.ap-northeast-1.amazonaws.com/bbs";
       var App = React.createClass({
-	//getInitialState:コンポーネントの持っているStateを初期化
         getInitialState: function() {
           return {
             userName: "",
@@ -100,7 +99,6 @@
 	//描画が行われる直前に呼ばれる
         componentWillMount: function() {
           var self = this;
-	//ajax:ウェブブラウザ内で非同期通信を行いながらインターフェースの構築
           $.ajax({
 	    url: ENDPOINT + "/bbs/articles",
             dataType: "json",
@@ -184,7 +182,6 @@
           });
 		},
 	
-	//render:レンダリングするコンポーネントのDOMを返す
         render: function() {
           return (
             <div className="container">
